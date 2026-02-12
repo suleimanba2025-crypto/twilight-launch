@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twilight Launch | Digital Growth Agency Oman</title>
 
-    <link rel="icon" type="image/png" href="/logo.png">
-    
+    <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png">
 
     <meta property="og:image" content="/logo.png">
@@ -17,49 +17,74 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
             --primary: #1e40af;
             --secondary: #6b21a8;
             --accent: #06b6d4;
         }
+
         body {
             font-family: 'Cairo', sans-serif;
             scroll-behavior: smooth;
             overflow-x: hidden;
             background-color: #f8fafc;
         }
+
         .gradient-text {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .bg-twilight {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
         }
-        
+
         /* Floating Animation */
         @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
+
         .animate-marquee {
             display: flex;
             width: max-content;
             animation: marquee 60s linear infinite;
         }
+
         [dir="rtl"] .animate-marquee {
             animation: marquee-rtl 60s linear infinite;
         }
-        @keyframes marquee-rtl {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(50%); }
-        }
-        .animate-marquee:hover { animation-play-state: paused; }
 
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        @keyframes marquee-rtl {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(50%);
+            }
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 
     <script type="importmap">
@@ -75,8 +100,10 @@
     </script>
     <link rel="stylesheet" href="/index.css">
 </head>
+
 <body class="bg-[#f8fafc] text-[#0f172a]">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
