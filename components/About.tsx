@@ -10,9 +10,9 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative scale-95">
-            <img 
-              src="https://picsum.photos/seed/muscat/800/600" 
-              alt="Muscat Office" 
+            <img
+              src="https://picsum.photos/seed/office/800/600"
+              alt="Agency Office"
               className="rounded-[2.5rem] shadow-xl relative z-10"
             />
             <div className="absolute -bottom-4 -right-4 rtl:-right-auto rtl:-left-4 bg-twilight px-6 py-4 rounded-2xl text-white shadow-lg z-20 hidden sm:block pointer-events-none">
@@ -20,7 +20,7 @@ const About: React.FC = () => {
               <p className="text-[8px] font-medium opacity-80 uppercase tracking-widest">{t('about_years')}</p>
             </div>
           </div>
-          
+
           <div className="md:pl-8 rtl:md:pl-0 rtl:md:pr-8">
             <h2 className="text-2xl md:text-3xl font-black mb-6 leading-tight tracking-tight">
               {t('about_title')} <span className="text-blue-800">{t('about_city')}</span>

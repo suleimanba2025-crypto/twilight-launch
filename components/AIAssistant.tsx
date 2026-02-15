@@ -32,12 +32,12 @@ const AIAssistant: React.FC = () => {
     try {
       // Use the injected process.env.API_KEY directly as per requirements
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-      
+
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
         contents: userMessage,
         config: {
-          systemInstruction: `You are the AI Strategy Expert for 'Twilight Launch', a digital growth agency in Muscat, Oman. Current User Interface Language is ${language === 'ar' ? 'Arabic' : 'English'}. ALWAYS respond in the language the user speaks to you. Provide high-level, strategic advice on Meta Ads, ROI engineering, and growth hacking specifically for the Omani market. Be professional, encouraging, and data-driven. Keep responses concise (under 100 words).`,
+          systemInstruction: `You are the AI Strategy Expert for 'Twilight Launch', a digital growth agency operating in Syria and Oman. Current User Interface Language is ${language === 'ar' ? 'Arabic' : 'English'}. ALWAYS respond in the language the user speaks to you. Provide high-level, strategic advice on Meta Ads, ROI engineering, and growth hacking specifically for the Syrian and Omani markets. Be professional, encouraging, and data-driven. Keep responses concise (under 100 words).`,
         }
       });
 
@@ -77,11 +77,10 @@ const AIAssistant: React.FC = () => {
           <div ref={scrollRef} className="flex-1 overflow-y-auto p-5 space-y-4 bg-gray-50/50">
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed ${
-                  m.role === 'user' 
-                    ? 'bg-blue-600 text-white rounded-tr-none shadow-md' 
+                <div className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed ${m.role === 'user'
+                    ? 'bg-blue-600 text-white rounded-tr-none shadow-md'
                     : 'bg-white text-gray-800 shadow-sm border border-gray-100 rounded-tl-none'
-                }`}>
+                  }`}>
                   {m.text}
                 </div>
               </div>
@@ -100,15 +99,15 @@ const AIAssistant: React.FC = () => {
           </div>
 
           <div className="p-4 bg-white border-t border-gray-100 flex items-center gap-2">
-            <input 
-              type="text" 
+            <input
+              type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
               placeholder={t('ai_placeholder')}
               className="flex-1 bg-gray-50 border-gray-200 border rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all"
             />
-            <button 
+            <button
               onClick={handleSend}
               disabled={isLoading}
               className="w-10 h-10 bg-twilight text-white rounded-xl flex items-center justify-center hover:scale-105 transition-transform disabled:opacity-50 shadow-md"
@@ -119,7 +118,7 @@ const AIAssistant: React.FC = () => {
         </div>
       )}
 
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className={`w-16 h-16 rounded-full bg-twilight text-white shadow-2xl flex items-center justify-center text-2xl transition-all duration-300 hover:scale-110 active:scale-95 z-[100] ${isOpen ? 'rotate-90' : 'rotate-0'}`}
       >
